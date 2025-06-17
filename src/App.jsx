@@ -7,7 +7,7 @@ import Home from './pages/Home';
 function App() {
   return (
     <BrowserRouter>
-        <div className="layout">
+        <div className="layout flex items-center justify-center">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
