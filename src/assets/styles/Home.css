@@ -7,37 +7,36 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+.logo-img {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
 .home-header {
-  font-family: montserrat;
-  color: #718A43;
-  width: 90%;
+  font-family: 'EB Garamond', serif;
+  text-align: left;
+  font-size: 36px;
+  color:  #7B6D8D;
+  width: 95%;
   margin-bottom: 2rem;
 }
 
 .home-text {
-  font-family: Lato;
-  font-size: large;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
   color: #333333;
   margin-bottom: 1.5rem;
 }
 
 .links-image {
   margin-top: 1rem;
+  width: 100%;
   display: flex;
-  width: 91%;
-}
+  justify-content: center;
 
-.selfie {
-  float: right;
-  width: 9rem;
-  height: 9rem;
-  border-radius: 50%;
-  shape-outside: circle(50%);
-  margin-left: 1rem;
 }
 
 .navigation-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
