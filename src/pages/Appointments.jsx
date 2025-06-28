@@ -3,7 +3,7 @@ import '../App.css'
 
 const Appointments = () => {
   return (
-    <div class>
+    <div className='layout-content'>
 
     </div>
   )
