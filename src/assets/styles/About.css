@@ -1,0 +1,61 @@
+.left-side, .right-side {
+  width: 50%;
+  height: 100%;
+  padding: 2rem; /* Add some spacing inside the columns */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Placeholder style for your carousel area */
+.placeholder-text {
+  color: #aaa;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px dashed #ccc;
+  padding: 4rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+
+/* --- THE SCROLLABLE CONTAINER --- */
+/* This is the magic part */
+.text-content-scrollable {
+  width: 100%;
+  height: 100%; /* Make it fill the parent .right-side container */
+  overflow-y: auto; /* This adds a scrollbar ONLY when the content is too long */
+  padding-right: 1.5rem; /* Adds space on the right to prevent content from hiding under the scrollbar */
+}
+
+.about-title, .right-side h2 {
+  font-family: 'EB Garamond', serif;
+  color: #7B6D8D; /* The purple color from the logo */
+  font-size: 2.5rem; /* Main title size */
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.right-side h2 {
+  font-size: 1.8rem; /* Sub-heading size */
+  margin-top: 1rem;
+}
+
+.right-side p, .right-side li {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333; /* Dark gray for readability */
+  line-height: 1.7; /* Generous line spacing for easy reading */
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.right-side ul {
+  list-style-position: inside; /* Keeps bullet points aligned nicely */
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.right-side strong {
+  font-weight: 700; /* Makes bold text stand out */
+}
