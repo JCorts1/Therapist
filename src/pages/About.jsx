@@ -1,22 +1,69 @@
-// About.jsx - Complete Component
-
 import React from 'react';
-import '../assets/styles/About.css';
+import '../assets/styles/About.css'
+import { Card, CardContent } from '../components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
+import Autoplay from "embla-carousel-autoplay";
 
-// You can import your carousel component or images here later
-// import ImageCarousel from './ImageCarousel';
 
+// A simple array of image URLs. Replace these with your actual photos.
+const carouselImages = [
+  "https://placehold.co/600x400/D6E4D8/333333?text=Terapia+con+Niños",
+  "https://placehold.co/600x400/E4D6D6/333333?text=Espacio+Seguro",
+  "https://placehold.co/600x400/D6D6E4/333333?text=Talleres+Grupales",
+  "https://placehold.co/600x400/E4E4D6/333333?text=Crecimiento+Personal",
+  "https://placehold.co/600x400/D6E0E4/333333?text=Bienestar+Integral"
+];
+
+const ImageCarousel = () => {
+  // Set up the autoplay plugin using a React ref
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
+  return (
+    <Carousel
+      plugins={[plugin.current]}
+      className="w-full max-w-md" // Set width and max-width for the carousel
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.play}
+    >
+      <CarouselContent>
+        {carouselImages.map((src, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden rounded-lg">
+                   <img src={src} alt={`Carousel image ${index + 1}`} className="w-full h-full object-cover" />
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  );
+};
+
+
+// --- Main About Component ---
 const About = () => {
   return (
     // This is the main container for the page, using the off-white background
     <div className='layout-content'>
 
+      {/* --- LEFT SIDE --- */}
+      {/* The placeholder is now replaced with the actual ImageCarousel component */}
       <div className='left-side'>
-        <p className='placeholder-text'>Área del Carrusel de Fotos</p>
+        <ImageCarousel />
       </div>
 
+      {/* --- RIGHT SIDE --- */}
+      {/* This is the container for all the text content. */}
       <div className='right-side'>
 
+        {/* This is the key part: a container for the text that will scroll */}
         <div className='text-content-scrollable'>
 
           <h1 className='about-title'>Hola, soy Tatiana Loaiza.</h1>
@@ -56,6 +103,8 @@ const About = () => {
           </ul>
 
         </div>
+
+        {/* --- SCROLL INDICATOR --- */}
         <div className="scroll-indicator">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 17.5L5.5 11L6.91 9.59L12 14.67L17.09 9.59L18.5 11L12 17.5Z" fill="currentColor"/>
