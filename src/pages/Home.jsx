@@ -6,7 +6,7 @@ import '../App.css'
 
 const Home = () => {
   return (
-    <div className='layout-content '>
+    <div className='layout-content'>
       <div className='left-side w-2/4 h-full flex justify-center items-center'>
         <img className='logo-img w-3/4 h-auto rounded-full' src={logo} alt="Logo" />
       </div>
