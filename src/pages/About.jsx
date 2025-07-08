@@ -33,7 +33,6 @@ const ImageCarousel = () => {
           <CarouselItem key={index}>
             <div className="p-1">
               <Card className="carousel-card">
-                {/* FIXED: Added h-full to make the content fill the card's height */}
                 <CardContent className="flex items-center justify-center p-0 overflow-hidden rounded-lg h-full">
                    <img src={src} alt={`Carousel image ${index + 1}`} className="w-full h-full object-cover" />
                 </CardContent>
