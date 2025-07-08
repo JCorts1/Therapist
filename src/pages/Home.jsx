@@ -24,10 +24,10 @@ const Home = () => {
             <Link to="/therapy" className='primary-button'>
               TERAPIA
             </Link>
-            <Link to="/appointment" className='primary-button'> {/* Changed to a more relevant link */}
+            <Link to="/appointment" className='primary-button'>
               RESERVA UNA CITA
             </Link>
-            <Link to="/contact" className='primary-button'> {/* Corrected text */}
+            <Link to="/contact" className='primary-button'>
               CONTÁCTAME
             </Link>
           </div>

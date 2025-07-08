@@ -5,14 +5,20 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import Profile from "@/assets/img/profile.jpg";
 import KidsTherapy from "@/assets/img/kids-therapy.jpg";
+import GroupsTherapy from "@/assets/img/group-therapy.jpg";
+import SoldierImg from "@/assets/img/soldier-img.jpg";
+import CrecimientoPersonal from "@/assets/img/crecimiento-personal.jpg";
 
 const carouselImages = [
   Profile,
   "https://placehold.co/600x400/E4D6D6/333333?text=Espacio+Seguro",
   KidsTherapy,
   "https://placehold.co/600x400/D6E4D8/333333?text=Terapia+con+Niños",
-  "https://placehold.co/600x400/D6D6E4/333333?text=Talleres+Grupales",
+  CrecimientoPersonal,
   "https://placehold.co/600x400/E4E4D6/333333?text=Crecimiento+Personal",
+  GroupsTherapy,
+  "https://placehold.co/600x400/D6D6E4/333333?text=Talleres+Grupales",
+  SoldierImg,
   "https://placehold.co/600x400/D6E0E4/333333?text=Bienestar+Integral"
 ];
 
