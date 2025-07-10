@@ -1,3 +1,6 @@
+/* src/App.css */
+
+/* --- Main Layout --- */
 .layout {
   background-image: url("./assets/img/layout.jpg");
   width: 100%;
@@ -5,37 +8,59 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 0;
-  margin: 0;
+
+  /* FIXED: Added flex properties here to center everything within the viewport */
+  display: flex;
+  flex-direction: column; /* Stack navbar and content vertically */
+  justify-content: center;
+  align-items: center;
 }
 
+/* This is the container for page content like Home, About, etc. */
+/* This class is now simpler and works for all pages */
+.main-content-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* The complex height calculation is no longer needed */
+  flex-grow: 1; /* This makes the main content area fill the remaining space */
+}
+
+/* This is the white box that holds the content on each page */
 .layout-content {
   display: flex;
   width: 85%;
   height: 85vh;
+  max-height: 800px;
   background-color: #F1EBE4;
   border-radius: 0.75rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+
+/* --- GLOBAL BUTTON STYLE --- */
 .primary-button {
-  background-image: url(./assets/img/layout.jpg);
-  padding: 0.7rem;
-  border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-family: montserrat;
+  background-color: #7B6D8D;
+  color: #F1EBE4;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  color:  #7B6D8D;
   font-weight: 600;
   text-align: center;
-  max-height: 1.9rem;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .primary-button:hover {
-  transition: 2.5s;
-  color: #F1EBE4;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: #61566f;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+  transform: translateY(-2px);
 }
