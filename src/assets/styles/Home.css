@@ -50,7 +50,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-/* --- Responsive Styles for Tablets --- */
+
 @media (max-width: 1024px) {
   .home-layout-content {
     height: auto;
@@ -71,7 +71,7 @@
   }
 
   .navigation-links-container {
-    justify-content: center; /* Center the buttons on tablet */
+    justify-content: center;
   }
 }
 
