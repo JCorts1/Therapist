@@ -1,5 +1,3 @@
-// src/pages/Home.jsx
-
 import React from 'react';
 import '../assets/styles/Home.css';
 import logo from '../assets/img/logo.jpg';
@@ -11,7 +9,7 @@ const Home = () => {
     // This new wrapper allows us to position the content and buttons separately
     <div className="home-page-wrapper">
       <div className='layout-content home-layout-content'>
-        
+
         <div className='home-left-side'>
           <img className='logo-img' src={logo} alt="Logo" />
         </div>
