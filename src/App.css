@@ -1,6 +1,5 @@
 /* src/App.css */
 
-/* --- Main Layout --- */
 .layout {
   background-image: url("./assets/img/layout.jpg");
   width: 100%;
@@ -8,38 +7,27 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* FIXED: Added flex properties here to center everything within the viewport */
   display: flex;
-  flex-direction: column; /* Stack navbar and content vertically */
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
-/* This is the container for page content like Home, About, etc. */
-/* This class is now simpler and works for all pages */
 .main-content-area {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  /* The complex height calculation is no longer needed */
-  flex-grow: 1; /* This makes the main content area fill the remaining space */
+  flex-grow: 1;
+  padding: 2rem 0;
 }
 
-/* This is the white box that holds the content on each page */
+/* This is the base style for the white box */
 .layout-content {
   display: flex;
   width: 85%;
-  height: 85vh;
-  max-height: 800px;
   background-color: #F1EBE4;
   border-radius: 0.75rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-
-/* --- GLOBAL BUTTON STYLE --- */
 .primary-button {
   background-color: #7B6D8D;
   color: #F1EBE4;
@@ -63,4 +51,16 @@
   color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
   transform: translateY(-2px);
+}
+
+/* --- Responsive Styles for the main layout --- */
+@media (max-width: 1024px) {
+  .layout-content {
+    flex-direction: column;
+    width: 90%;
+    height: auto; /* Let height grow with content */
+  }
+  .main-content-area {
+    padding: 1rem 0; /* Reduce padding on smaller screens */
+  }
 }

@@ -1,35 +1,129 @@
+/* src/assets/styles/Home.css */
 
+/* --- Desktop First Styles --- */
+.home-layout-content {
+  /* This ensures the container has a fixed height on large screens */
+  height: 85vh;
+  max-height: 800px;
+}
+
+.home-left-side, .home-right-side {
+  width: 50%;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .logo-img {
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  width: 75%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.home-text-container {
+  width: 100%;
 }
 
 .home-header {
   font-family: 'EB Garamond', serif;
-  text-align: left;
   font-size: 36px;
-  color:  #7B6D8D;
-  width: 95%;
+  color: #7B6D8D;
   margin-bottom: 2rem;
+  text-align: left;
 }
 
-.home-text {
+.home-paragraph {
   font-family: 'Montserrat', sans-serif;
   font-size: 22px;
   color: #333333;
-  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: left;
+  /* This creates the space between the text and the buttons */
+  margin-bottom: 3rem;
 }
 
-.links-image {
-  margin-top: 1rem;
+.navigation-links-container {
   width: 100%;
   display: flex;
-  justify-content: center;
-
+  justify-content: flex-start; /* Aligns buttons to the left */
 }
 
 .navigation-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* ========================================= */
+/* --- Responsive Styles for Tablets --- */
+@media (max-width: 1024px) {
+  .home-layout-content {
+    height: auto; /* Let height be flexible */
+  }
+
+  .home-left-side, .home-right-side {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .home-header, .home-paragraph {
+    text-align: center;
+  }
+
+  .navigation-links-container {
+    justify-content: center; /* Center the buttons on tablet */
+  }
+}
+
+/* ========================================= */
+/* --- Responsive Styles for Phones --- */
+@media (max-width: 768px) {
+
+  .home-layout-content {
+    margin-top: 1rem !important;
+    height: auto !important;
+  }
+
+  .home-left-side {
+    padding: 2rem 1.5rem 1rem 1.5rem;
+  }
+
+  .home-right-side {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+  }
+
+  .logo-img {
+    width: 60%;
+    max-width: 220px;
+  }
+
+  .home-header {
+    font-size: 28px;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-paragraph {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .home-navigation-links {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .primary-button {
+    width: 90%;
+    margin: 0.3rem;
+  }
 }
